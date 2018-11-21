@@ -5,7 +5,8 @@
  */
 package TESTER;
 
-import MODEL_HR.MYORCL;
+
+import UTIL.MyOracle;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -25,7 +26,7 @@ public class test2 {
      */
     public static void main(String[] args) {
         try {
-            MYORCL ora = new MYORCL("MHS175314102", "MHS175314102", "172.23.9.185", "1521", "orcl");
+            MyOracle ora = new MyOracle("MHS175314102", "MHS175314102", "172.23.9.185", "1521", "orcl");
             //step2 create  the connection object
             Connection con = ora.getConnection();
             //step3 create the statement object
