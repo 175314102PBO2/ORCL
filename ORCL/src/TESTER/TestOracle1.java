@@ -15,7 +15,7 @@ import java.sql.Statement;
  *
  * @author admin
  */
-public class test1 {
+public class TestOracle1 {
 
     /**
      * @param args the command line arguments

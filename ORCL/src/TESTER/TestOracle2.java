@@ -19,7 +19,7 @@ import java.util.logging.Logger;
  *
  * @author admin
  */
-public class test2 {
+public class TestOracle2 {
 
     /**
      * @param args the command line arguments
@@ -40,7 +40,7 @@ public class test2 {
             //step5 close the connection object
             con.close();
         } catch (SQLException ex) {
-            Logger.getLogger(test2.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TestOracle2.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }
