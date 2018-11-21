@@ -22,6 +22,13 @@ public class department {
         this.department_name = department_name;
     }
 
+    public void readEmployees() {
+
+    }
+
+    public department() {
+    }
+
     public int getDepartment_id() {
         return department_id;
     }
