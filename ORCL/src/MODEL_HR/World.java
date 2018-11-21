@@ -31,7 +31,7 @@ public class World {
             //step3 create the statement object
             Statement stmt = con.createStatement();
             //step4 execute query
-            String query = "select * from regions";
+            String query = "select * from Region";
             ResultSet rs = stmt.executeQuery(query);
             while (rs.next()) {
 //                System.out.println(rs.getString(1) + "  " + rs.getString(2));
