@@ -33,8 +33,8 @@ public class TestOracle1 {
             Statement stmt = con.createStatement();
 
 //step4 execute query  
-            ResultSet rs = stmt.executeQuery("SELECT FIRST_NAME, LAST_NAME\n"
-                    + "FROM MHS175314102.EMPLOYEES");
+            ResultSet rs = stmt.executeQuery("SELECT first_name, last_name\n" +
+"FROM mhs175314102.employees;");
             while (rs.next()) {
                 System.out.println(rs.getString(1) + "  " + rs.getString(2));
             }
