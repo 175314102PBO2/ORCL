@@ -14,10 +14,6 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author admin
- */
 public class World {
 
     private ArrayList<REGION> listRegions = new ArrayList<REGION>();
