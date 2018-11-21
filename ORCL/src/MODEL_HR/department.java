@@ -5,6 +5,8 @@
  */
 package MODEL_HR;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author admin
@@ -13,6 +15,12 @@ public class department {
 
     private int department_id;
     private String department_name;
+    private ArrayList<Employee> listEmployees = new ArrayList<Employee>();
+
+    public department(int department_id, String department_name) {
+        this.department_id = department_id;
+        this.department_name = department_name;
+    }
 
     public int getDepartment_id() {
         return department_id;
@@ -28,6 +36,14 @@ public class department {
 
     public void setDepartment_name(String department_name) {
         this.department_name = department_name;
+    }
+
+    public ArrayList<Employee> getListEmployees() {
+        return listEmployees;
+    }
+
+    public void setListEmployees(ArrayList<Employee> listEmployees) {
+        this.listEmployees = listEmployees;
     }
 
 }
