@@ -16,6 +16,7 @@ public class department {
     private int department_id;
     private String department_name;
     private ArrayList<Employee> listEmployees = new ArrayList<Employee>();
+    private ArrayList<Employee> managers = new ArrayList<Employee>();
 
     public department(int department_id, String department_name) {
         this.department_id = department_id;
