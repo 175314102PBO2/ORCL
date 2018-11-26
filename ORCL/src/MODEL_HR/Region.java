@@ -10,6 +10,7 @@ package MODEL_HR;
  * @author admin
  */
 public class Region {
+
     private int region_id;
     private String region_name;
 
@@ -21,7 +22,6 @@ public class Region {
         this.region_name = region_name;
     }
 
-    
     /**
      * @return the region_id
      */
@@ -49,8 +49,8 @@ public class Region {
     public void setRegion_name(String region_name) {
         this.region_name = region_name;
     }
-    
-    public String toString(){
-        return region_id+","+region_name;
-}
+
+    public String toString() {
+        return region_id + "," + region_name;
+    }
 }
