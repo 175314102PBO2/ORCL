@@ -11,9 +11,19 @@ package MODEL_HR;
  */
 public class Employee {
 
+    private int employee_id;
     private String first_name;
     private String last_name;
 
+    public Employee(int employee_id, String first_name, String last_name) {
+        this.employee_id = employee_id;
+        this.first_name = first_name;
+        this.last_name = last_name;
+    }
+
+    /**
+     * @return the first_name
+     */
     public String getFirst_name() {
         return first_name;
     }
@@ -40,6 +50,20 @@ public class Employee {
     }
 
     public String toString() {
-        return first_name + " " + last_name;
+        return employee_id + " " + first_name + " " + last_name;
+    }
+
+    /**
+     * @return the employee_id
+     */
+    public int getEmployee_id() {
+        return employee_id;
+    }
+
+    /**
+     * @param employee_id the employee_id to set
+     */
+    public void setEmployee_id(int employee_id) {
+        this.employee_id = employee_id;
     }
 }
