@@ -22,16 +22,19 @@ public class World {
     public World() {
     }
 
+    /**
+     * Fungsi ini akan membaca tabel regions lalu dimasukkan ke daftar regions
+     */
     public void readRegions() {
         try {
             // buat koneksi
-            MyOracle ora = new MyOracle("172.23.9.185", "1521", "orcl", "MHS175314102", "MHS175314102");
+            MyOracle ora = new MyOracle("172.23.9.185", "1521", "orcl", "puspa", "puspa");
             //step2 create  the connection object
             Connection con = ora.getConnection();
             //step3 create the statement object
             Statement stmt = con.createStatement();
             //step4 execute query
-            String query = "select * from Region";
+            String query = "select * from regions";
             ResultSet rs = stmt.executeQuery(query);
             while (rs.next()) {
 //                System.out.println(rs.getString(1) + "  " + rs.getString(2));
