@@ -54,4 +54,14 @@ public class department {
         this.listEmployees = listEmployees;
     }
 
+    public ArrayList<Employee> getManagers() {
+        return managers;
+    }
+
+    /**
+     * @param managers the managers to set
+     */
+    public void setManagers(ArrayList<Employee> managers) {
+        this.managers = managers;
+    }
 }
