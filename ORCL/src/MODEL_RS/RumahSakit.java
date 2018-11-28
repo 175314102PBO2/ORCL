@@ -68,7 +68,7 @@ public class RumahSakit {
                 for (int i = 0; i < getDaftarDokter().size(); i++) {
                     Dokter temp = getDaftarDokter().get(i);
                     // buat query
-                    query = "INSERT INTO DOKTER (ID_DOKTER, NAMA) "
+                    query = "INSERT INTO DOKTER (ID_DOKTER, NAMA)"
                             + "VALUES ('" + temp.getIdDokter() + "','"
                             + temp.getNama() + "')";
                     // eksekusi query
