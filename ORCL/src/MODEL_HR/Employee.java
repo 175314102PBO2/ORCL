@@ -21,6 +21,15 @@ public class Employee {
         this.last_name = last_name;
     }
 
+    public Employee() {
+        
+    }
+
+    public Employee(String first_name, String last_name) {
+        this.first_name = first_name;
+        this.last_name = last_name;
+    }
+
     /**
      * @return the first_name
      */
@@ -50,7 +59,7 @@ public class Employee {
     }
 
     public String toString() {
-        return employee_id + " " + first_name + " " + last_name;
+        return   first_name + " " + last_name;
     }
 
     /**
@@ -66,4 +75,6 @@ public class Employee {
     public void setEmployee_id(int employee_id) {
         this.employee_id = employee_id;
     }
+
+
 }
