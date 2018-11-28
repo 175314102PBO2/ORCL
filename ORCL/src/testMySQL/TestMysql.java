@@ -19,7 +19,7 @@ import testOracle.TestOracle1;
  */
 public class TestMysql {
 
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) {
         try {
             //step1 load the driver class
             Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -35,8 +35,8 @@ public class TestMysql {
 //            }
             //step5 close the connection object
             con.close();
-        } catch (ClassNotFoundException ex) {
+        } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(TestOracle1.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
+}
 }
