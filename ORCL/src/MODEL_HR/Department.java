@@ -61,33 +61,33 @@ public class Department {
     }
 
     public void readManager() {
-try {
-            // buat kelas database
-            MyOracle ora = new MyOracle("172.23.9.185", "1521", "orcl",
-                    MyOracle.USER_NAME, MyOracle.PASSWORD);
-            // buat koneksi
-            Connection con = ora.getConnection();
-            // buat statement
-            Statement statement = con.createStatement();
-            // buat query
-            // SELECT id_dokter,nama from puspa.dokter 
-            String query = "SELECT manager_id FROM departments WHERE DEPARTMENT_ID = "+department_id;
-            // kosongkan list 
-            setManagers(new ArrayList<Employee>());
-            // jalankan/eksekusi queri
-            ResultSet emp = statement.executeQuery(query);
-            while (emp.next()) {
-                m temp = new Employee(emp.getString(1),emp.getString(2));
-//                temp.setEmployee_id("DEPARTMET");
-//                temp.setFirst_name(department_name);
-                // tambahkan ke list
-               managers.add(temp);
-            }
-            // tutup koneksi
-            con.close();
-        } catch (SQLException ex) {
-            Logger.getLogger(Department.class.getName()).log(Level.SEVERE, null, ex);
-        }
+//try {
+//            // buat kelas database
+//            MyOracle ora = new MyOracle("172.23.9.185", "1521", "orcl",
+//                    MyOracle.USER_NAME, MyOracle.PASSWORD);
+//            // buat koneksi
+//            Connection con = ora.getConnection();
+//            // buat statement
+//            Statement statement = con.createStatement();
+//            // buat query
+//            // SELECT id_dokter,nama from puspa.dokter 
+//            String query = "SELECT manager_id FROM departments WHERE DEPARTMENT_ID = "+department_id;
+//            // kosongkan list 
+//            setManagers(new ArrayList<Employee>());
+//            // jalankan/eksekusi queri
+//            ResultSet emp = statement.executeQuery(query);
+//            while (emp.next()) {
+//                m temp = new Employee(emp.getString(1),emp.getString(2));
+////                temp.setEmployee_id("DEPARTMET");
+////                temp.setFirst_name(department_name);
+//                // tambahkan ke list
+//               managers.add(temp);
+//            }
+//            // tutup koneksi
+//            con.close();
+//        } catch (SQLException ex) {
+//            Logger.getLogger(Department.class.getName()).log(Level.SEVERE, null, ex);
+//        }
     }
 
     public Department() {
