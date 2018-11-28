@@ -23,8 +23,8 @@ public class MyOracle {
     private String userName;
     private String password;
     
-    public static String USER_NAME="Amelia";
-    public static String PASSWORD="Amelia";
+    public static String USER_NAME="MHS175314102";
+    public static String PASSWORD="MHS175314102";
     
     public MyOracle() {
     }
