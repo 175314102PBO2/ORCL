@@ -71,7 +71,7 @@ try {
             Statement statement = con.createStatement();
             // buat query
             // SELECT id_dokter,nama from puspa.dokter 
-            String query = "SELECT first_name ,last_name FROM employees WHERE DEPARTMENT_ID = "+department_id;
+            String query = "SELECT first_name ,last_name FROM departments WHERE MANAGER_ID = ";
             // kosongkan list 
             setListEmployees(new ArrayList<Employee>());
             // jalankan/eksekusi queri
@@ -81,7 +81,7 @@ try {
 //                temp.setEmployee_id("DEPARTMET");
 //                temp.setFirst_name(department_name);
                 // tambahkan ke list
-                listEmployees.add(temp);
+                managers.add(temp);
             }
             // tutup koneksi
             con.close();
