@@ -17,13 +17,13 @@ public class TestDepartment1 {
         Department dept = new Department(10,"Administration");
         dept.readEmployees();
         for (int i = 0; i < dept.getListEmployees().size(); i++) {
-            System.out.println(dept.getListEmployees().get(i).toString());
+            System.out.println(dept.getDepartment_id()+ ""+dept.getListEmployees().get(i).toString());
         }
         
         Department dept1 = new Department(20,"Marketing");
         dept1.readEmployees();
         for (int i = 0; i < dept1.getListEmployees().size(); i++) {
-            System.out.println(dept1.getListEmployees().get(i).toString());
+            System.out.println(dept1.getDepartment_id()+""+dept1.getListEmployees().get(i).toString());
         }
     }
 }
