@@ -9,6 +9,7 @@ import MODEL_RS.RumahSakit;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.Frame;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JDialog;
@@ -60,6 +61,7 @@ public class MyDokterDialog extends JDialog {
             public void actionPerformed(ActionEvent e) {
                 tambahDokter();
             }
+
         });
         // tombol untuk simpan data arrayList Dokter ke basis data
         simpanButton = new JButton("Simpan Ke Database");

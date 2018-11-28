@@ -5,10 +5,57 @@
  */
 package view;
 
+import MODEL_RS.RumahSakit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
 /**
  *
  * @author admin
  */
-public class TambahDokterDialog {
-    
+public class TambahDokterDialog extends JDialog {
+
+    private RumahSakit rumahSakit;
+    private JLabel tambahDokterLabel;
+    private JLabel idDokterLabel;
+    private JTextField idDokterText;
+    private JLabel namaDokterLabel;
+    private JTextField namaDokterText;
+    private JButton tambahButton;
+
+    public TambahDokterDialog(JDialog owner, RumahSakit rs) {
+        super(owner);
+        rumahSakit = rs;
+        init();
+    }
+
+    /**
+     * Fungsi untuk inisialisasi
+     */
+    public void init() {
+        // set size
+        setSize(400, 300);
+        // set layout
+        setLayout(null);
+        // tambah Tombol Tambah
+        tambahButton = new JButton("Tambah");
+        tambahButton.setBounds(50, 200, 100, 30);
+        add(tambahButton);
+        // set action listener button
+        tambahButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tambahDokter();
+            }
+
+        });
+    }
+
+    public void tambahDokter() {
+        dispose();
+    }
 }
