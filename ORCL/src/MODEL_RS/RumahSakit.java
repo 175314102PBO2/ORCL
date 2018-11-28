@@ -68,7 +68,7 @@ public class RumahSakit {
                 for (int i = 0; i < getDaftarDokter().size(); i++) {
                     Dokter temp = getDaftarDokter().get(i);
                     // buat query
-                    query = "INSERT INTO PUSPA.DOKTER (ID_DOKTER, NAMA) "
+                    query = "INSERT INTO DOKTER (ID_DOKTER, NAMA) "
                             + "VALUES ('" + temp.getIdDokter() + "','"
                             + temp.getNama() + "')";
                     // eksekusi query
@@ -97,7 +97,7 @@ public class RumahSakit {
             Statement statement = con.createStatement();
             // buat query
             // SELECT id_dokter,nama from puspa.dokter 
-            String query = "SELECT id_dokter,nama from puspa.dokter";
+            String query = "SELECT id_dokter,nama from dokter";
             // kosongkan list 
             setDaftarDokter(new ArrayList<Dokter>());
             // jalankan/eksekusi queri
