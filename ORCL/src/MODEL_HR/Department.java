@@ -71,17 +71,17 @@ try {
             Statement statement = con.createStatement();
             // buat query
             // SELECT id_dokter,nama from puspa.dokter 
-            String query = "SELECT first_name ,last_name FROM departments WHERE MANAGER_ID = ";
+            String query = "SELECT manager_id FROM departments WHERE DEPARTMENT_ID = "+department_id;
             // kosongkan list 
-            setListEmployees(new ArrayList<Employee>());
+            setManagers(new ArrayList<Employee>());
             // jalankan/eksekusi queri
             ResultSet emp = statement.executeQuery(query);
             while (emp.next()) {
-                Employee temp = new Employee(emp.getString(1),emp.getString(2));
+                m temp = new Employee(emp.getString(1),emp.getString(2));
 //                temp.setEmployee_id("DEPARTMET");
 //                temp.setFirst_name(department_name);
                 // tambahkan ke list
-                managers.add(temp);
+               managers.add(temp);
             }
             // tutup koneksi
             con.close();
