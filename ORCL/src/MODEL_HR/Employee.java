@@ -25,6 +25,10 @@ public class Employee {
         
     }
 
+    public Employee(int employee_id) {
+        this.employee_id = employee_id;
+    }
+
     public Employee(String first_name, String last_name) {
         this.first_name = first_name;
         this.last_name = last_name;
