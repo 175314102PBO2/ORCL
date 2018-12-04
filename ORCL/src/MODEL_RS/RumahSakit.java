@@ -50,15 +50,13 @@ public class RumahSakit {
     public void simpanDataDokter() {
         try {
             // buat kelas database
-            MyOracle ora = new MyOracle("172.23.9.185", "1521", "orcl",
-                    MyOracle.USER_NAME, MyOracle.PASSWORD);
+
+            MyOracle ora = new MyOracle("172.23.9.185", "1521", "orcl", "MHS175314102", "MHS175314102");
             // buat koneksi
             Connection con = ora.getConnection();
             // buat statement
             Statement statement = con.createStatement();
             // buat query
-            // INSERT INTO PUSPA.DOKTER (ID_DOKTER, NAMA) 
-            // VALUES ('002', 'Adi')
             String query;
             if (getDaftarDokter().isEmpty()) {
                 // daftar dokter kosong
@@ -68,9 +66,9 @@ public class RumahSakit {
                 for (int i = 0; i < getDaftarDokter().size(); i++) {
                     Dokter temp = getDaftarDokter().get(i);
                     // buat query
-                    query = "INSERT INTO DOKTER (ID_DOKTER, NAMA)"
-                            + "VALUES ('" + temp.getIdDokter() + "','"
-                            + temp.getNama() + "')";
+                    query = "SELECT ID_DOKTER, NAMA "
+                            + "FROM MHS175314102.DOKTER" + temp.getIdDokter() + "','"
+                            + temp.getNama();
                     // eksekusi query
                     statement.execute(query);
                     con.commit();
@@ -90,14 +88,15 @@ public class RumahSakit {
         try {
             // buat kelas database
             MyOracle ora = new MyOracle("172.23.9.185", "1521", "orcl",
-                    MyOracle.USER_NAME, MyOracle.PASSWORD);
+                    "MHS175314102", "MHS175314102");
             // buat koneksi
             Connection con = ora.getConnection();
             // buat statement
             Statement statement = con.createStatement();
             // buat query
             // SELECT id_dokter,nama from puspa.dokter 
-            String query = "SELECT id_dokter,nama from dokter";
+            String query = "SELECT ID_DOKTER, NAMA "
+                    + "FROM MHS175314102.DOKTER";
             // kosongkan list 
             setDaftarDokter(new ArrayList<Dokter>());
             // jalankan/eksekusi queri
