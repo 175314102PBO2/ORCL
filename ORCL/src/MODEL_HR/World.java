@@ -28,7 +28,7 @@ public class World {
     public void readRegions() {
         try {
             // buat koneksi
-            MyOracle ora = new MyOracle("172.23.9.185", "1521", "orcl", "puspa", "puspa");
+            MyOracle ora = new MyOracle("172.23.9.185", "1521", "orcl", "MHS175314102", "MHS175314102");
             //step2 create  the connection object
             Connection con = ora.getConnection();
             //step3 create the statement object
